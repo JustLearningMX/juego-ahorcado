@@ -5,26 +5,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="./imgs/faviconIcon.ico">
-    <title>Ingresar palabra</title>
-    <link rel="stylesheet" href="./css/index.css">    
-
+    <title>Jugar al ahorcado</title>
+    <link rel="stylesheet" href="./css/index.css">
 </head>
 <body>
     <nav id="navbar">
         <img class="icon-navbar" src="./imgs/alura-icon.png" alt="icono-de-alura">
     </nav>
     <main id="main">
-        <section class="contenedor-palabra">
-            <label for="palabra-nueva" class="labels">Ingrese una palabra</label>
-            <input type="text" name="palabra-nueva" id="palabra-nueva" class="palabra-nueva" autofocus>
-            <span class="mensaje"></span>
+        <section class="canva">
+            <canvas class="lienzo" width="300" height="250"></canvas>
+            <div class="mensajes"></div>
         </section>
-        <section class="contenedor-botones-ingresar">
-            <button class="botones btn-principal btn-guardar">
-                Guardar y empezar
+
+        <section class="contenedor-palabraElegida">
+        </section>
+        <section class="contenedor-letrasDescartadas">
+        </section>
+
+        <section class="contenedor-botones-jugar">
+            <button class="botones btn-principal btn-nuevo">
+                Nuevo juego
             </button>
             <button class="botones btn-secundario btn-cancelar">
-                Cancelar
+                Desistir
             </button>
         </section>
     </main>
@@ -35,8 +39,8 @@
         </section>
     </footer>
     
-    <script src="./js/palabras.js"></script>
     <script src="./js/escuchadorBotones.js"></script>
-    <script src="./js/ingresarPalabra.js"></script>
+    <script src="./js/palabras.js"></script>
+    <script defer src="./js/jugar.js"></script>
 </body>
 </html>

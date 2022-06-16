@@ -51,16 +51,18 @@ table {
 }
 
 #navbar{
-    height: 15%;
+    /* border: 1px solid green; */
+    height: 10%;
 }
 
 .icon-navbar{
-    height: 48px;
-    margin: 25px 0 0 60px;
+    height: 35px;
+    margin: 10px 0 0 60px;
 }
 
 #main{
-    height: 65%;
+    /* border: 1px solid green; */
+    height: 80%;
     position: relative;
 }
 
@@ -68,15 +70,14 @@ table {
     position: absolute;
     width: fit-content;
     top: calc(50% - 60px);
-    left: calc(50% - 100px);
-    /* border: 1px solid green; */
+    left: calc(50% - 100px);    
 }
 
 .botones{
     width: 200px;
     height: 50px;
     display: block;
-    border-radius: 10px;
+    border-radius: 20px;
     border: none;
     cursor: pointer;
     background-color: #0A3871;
@@ -115,17 +116,15 @@ table {
 }
 
 #footer{
-    height: 20%;
-    position: relative;
+    height: 10%;
     background-color: #0A3871;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .datos-dev{
     text-align: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(0, -50%);
     color: #f0f0f0;
     font-size: .8rem;
     font-weight: 300;
@@ -134,4 +133,166 @@ table {
 .datos-dev > p {
     margin-bottom: 5px;
     font-weight: 500;
+}
+
+/***
+*INGRESAR.HTML
+**/
+
+.contenedor-palabra{
+    position: relative;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+}
+
+.labels{
+    font-size: 1.4rem;
+    color: #0A3871;
+    font-weight: 500;
+    margin-bottom: 10px;
+    width: 250px;
+    text-align: center;
+}
+
+.palabra-nueva{
+    border: 1px solid lightslategray;
+    width: 250px;
+    height: 30px;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.mensaje{
+    position: absolute;
+    top: 85%;
+    color: #666;
+}
+
+.contenedor-botones-ingresar{
+    position: absolute;
+    width: 100%;
+    top: 75%;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+
+.btn-guardar, .btn-cancelar{
+    margin-bottom: 0;
+}
+
+.btn-guardar{
+    margin-right: 45px;
+}
+
+/***
+*JUGAR.HTML
+**/
+
+.canva{
+    /* border: 1px solid blue; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 20px; 
+}
+
+.lienzo{
+    width: 300px;
+    height: 250px;
+    border: 1px solid lightslategray;
+}
+
+.mensajes{    
+    /* border: 1px solid crimson; */
+    width: 300px;
+    height: 30px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.mensajes > p{
+    font-size: 1rem;
+}
+
+.contenedor-palabraElegida{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 10px 10px 0 10px;
+    /* border: 1px solid blueviolet; */
+}
+
+.inputLetra{
+    width: 40px;
+    height: 40px;
+    border: none;
+    margin-top: 5px;
+    margin-right: 15px;
+    border-bottom: 2.5px solid #0A3871;
+    font-size: 1.8rem;
+    font-weight: 500;
+    text-align: center;
+    color: #0A3871;
+    text-transform: uppercase;
+    /* background-color: bisque; */
+}
+
+.inputOk{
+    border: 1.5px solid #3e8e41;
+}
+
+.inputFailed{
+    border: 1.5px solid crimson;
+}
+
+.contenedor-letrasDescartadas{
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;    
+}
+
+.contenedor-letrasDescartadas > p{
+    color: #666;
+    font-size: 1.2rem;
+    margin-right: 10px;
+}
+
+.contenedor-botones-jugar{
+    position: absolute;
+    width: 100%;
+    top: 87%;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+
+.btn-nuevo{
+    margin-bottom: 0;
+    margin-right: 45px;
+}
+
+/* Diseño para dispositivos móviles */
+@media screen and (min-width: 250px) and (max-width: 600px) {
+    .contenedor-botones-ingresar, .contenedor-botones-jugar{
+        flex-direction: column;
+    }
+
+    .btn-guardar, .btn-nuevo{
+        margin: 0;
+        margin-bottom: 25px;
+    }    
+
+    .contenedor-botones-jugar{
+        top: 75%;
+    }
+
+    /*Jugar.html*/
 }
