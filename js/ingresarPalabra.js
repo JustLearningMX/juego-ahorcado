@@ -17,6 +17,7 @@ botonGuardar.addEventListener('click', (e)=>{
     e.preventDefault();
 
     if(esLongitudCorrecta){
+        
         palabras.push(palabraNueva.value);
         
         if(arrayDePalabras){

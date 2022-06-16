@@ -2,10 +2,10 @@ const pantalla = document.querySelector('.lienzo');
 const pincel = pantalla.getContext('2d');
 pincel.fillStyle = 'white';
 pincel.fillRect(0,0,300,250);
+console.log(palabras)
+let arrayDePalabras = JSON.parse(window.localStorage.getItem('palabras'));
 
-const arrayDePalabras = JSON.parse(window.localStorage.getItem('palabras'));
-
-arrayDePalabras ? arrayDePalabras : palabras;
+arrayDePalabras = !arrayDePalabras ? palabras : arrayDePalabras;
 
 const getRandomInt = (min, max) => {
     return Math.floor(Math.random() * (max - min)) + min;
